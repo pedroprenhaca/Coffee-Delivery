@@ -142,5 +142,22 @@ export const ItemFour = styled.div`
 /*-----------------------------------Main-------------------------------------------*/
 
 export const MainContainer = styled.div`
+h2{
+    font-family: "Baloo 2";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    color:${props=>props.theme["base-subtitle"]}
+}
+`
+
+export const CoffeesContainer = styled.div`
+display: flex;
+flex-wrap:wrap ;
+height: auto;
+gap: 4.7rem;
+
+margin-top: 3rem;
+
 
 `

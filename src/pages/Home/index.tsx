@@ -10,7 +10,8 @@ import { HomeContainer,
         ItemTwo,
         ItemThree,
         ItemFour,
-        MainContainer
+        MainContainer,
+        CoffeesContainer
 } from "./styles";
 import { Coffes } from "../../Components/Coffees";
 
@@ -52,9 +53,9 @@ export function Home(){
             <MainContainer>
                 <h2>Nossos cafés</h2>
 
-                <div>
+                <CoffeesContainer>
                     <Coffes/>
-                </div>
+                </CoffeesContainer>
             </MainContainer>
         </HomeContainer>
     )
