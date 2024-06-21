@@ -1,12 +1,13 @@
 import styled from "styled-components";
+//------------------------------Pagina Home---------------------------------
 
 export const CoffesContainer = styled.div`
-    
     
     width: 16rem;
     height: 19.375rem;
     border-radius: 0.375rem 2.25rem;
-    padding: 0 1.25rem 2rem;
+    padding: 0 1rem 3rem 1rem;
+    
 
     display: flex;
     flex-direction: column;
@@ -15,8 +16,7 @@ export const CoffesContainer = styled.div`
 
     
 
-    background-color: ${props=>props.theme["base-card"]};
-    
+    background:${props=>props.theme["base-card"]} ;
 
     img{
         
@@ -28,7 +28,6 @@ export const CoffesContainer = styled.div`
     }
 
     h1{
-        
         font-family: "Baloo 2";
         font-size: 1.25rem;
         font-style: normal;
@@ -51,28 +50,15 @@ export const CoffesContainer = styled.div`
 
 `
 
-export const Tag = styled.div`
-
-    width: 5rem;
-    height: 1.3rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6.25rem;
+export const TagContainer = styled.div`
+    
+    display: flex;
+    gap:0.5rem;
     margin-top: 1rem;
-
-    background-color: ${props=>props.theme["yellow-light"]};
-
-    p{
-        
-        font-family: "Roboto";
-        font-size: 0.625rem;
-        font-style: normal;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        color:${props=>props.theme["yellow-dark"]} ;
-    }
-
+    margin-bottom: 1rem;
 `
+
+
 
 export const BuyContainer = styled.div`
     display: flex;
@@ -94,8 +80,10 @@ export const BuyContainer = styled.div`
 export const CounterAndButton = styled.div`
     display: flex;
     gap: 0.5rem;
-
+  
+    
    button{
+    
     width: 2.375rem;
     height:2.375rem ;
 
@@ -106,7 +94,7 @@ export const CounterAndButton = styled.div`
     gap: 0.5rem;
     border-radius: 0.375rem;
     border: none;
-    
+    cursor: pointer;
 
     background: ${props=>props.theme["purple-dark"]};
 
@@ -114,9 +102,9 @@ export const CounterAndButton = styled.div`
         width: 1.375rem;
         height:1.375rem;
         color: ${props=>props.theme["base-card"]};
+
     }
    }
-
 
 `
 
@@ -131,12 +119,18 @@ export const Counter = styled.div`
     border-radius: 0.375rem;
 
     background-color: ${props=>props.theme["base-button"]};
-    
+
     svg{
         width: 0.875rem;
         height: 0.875rem;
 
+        cursor: pointer;
+
         color: ${props=>props.theme.purple};
+
+        :hover{
+            color: ${props=>props.theme["purple-dark"]};
+        }
     }
 
     p{
@@ -146,5 +140,109 @@ export const Counter = styled.div`
         font-weight: 400;
 
         color: ${props=>props.theme["base-title"]};
+    }
+`
+
+
+
+//------------------------------Pagina Checkout---------------------------------
+
+export const CoffeesCheckoutContainer = styled.div`
+border-bottom: 2px solid ${props=>props.theme["base-button"]};
+width:23rem;
+height: 5rem;
+display: flex;
+padding: 0.5rem 0.25rem;
+justify-content: space-between;
+
+background-color: ${props=>props.theme["base-card"]};
+
+div{
+    img{
+        width: 4rem;
+        height: 4rem;   
+    }
+}
+
+`
+
+export const NameAndCounterAndRemove = styled.div`
+h1{
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+
+    ${props=>props.theme["base-subtitle"]}
+}
+`
+
+export const CounterAndRemove = styled.div`
+display: flex;
+gap: 0.5rem;
+align-items: end;
+
+
+`
+
+export const CounterCheckout = styled.div`
+width: 4.5rem;
+height: 2rem;
+display: flex;
+height: 2rem;
+padding: 0.5rem;
+justify-content: center;
+align-items: center;
+gap: 0.25rem;
+margin-top:.5rem;
+border-radius: 0.375rem;
+background:${props=>props.theme["base-button"]} ;
+
+svg{
+    width: 0.875rem;
+    height: 0.875rem;
+    color: ${props=>props.theme["purple-dark"]};
+}
+
+p{
+font-family: 'Roboto';
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+text-align: center;
+color: ${props=>props.theme["base-title"]};
+}
+`
+
+export const BtnRemove = styled.div`
+display: flex;
+
+
+    button{
+        display: flex;
+        width: 5.6rem;
+        height: 2rem;
+        padding: 0rem 0.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+
+        border-radius: 0.375rem;
+        background:${props=>props.theme["base-button"]};
+        border: none;
+    }
+
+    svg{
+        width: 1rem;
+        height: 1rem;
+        color: ${props=>props.theme["purple-dark"]};
+    }
+    p{
+        font-family: 'Roboto';
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+
+        color:${props=>props.theme["base-text"]}
     }
 `

@@ -12,11 +12,30 @@ export const HeaderContainer = styled.div`
 export const LogoContainer = styled.div`
     width: 5.3095rem;
     height: 2.5rem;
+    
+    img{
+        cursor: pointer;
+    }
 `
 
 export const LocationAndCart = styled.div`
     display: flex;
     gap: 0.75rem;
+    div{
+        span{
+        width: 0.7rem;
+        height: 1rem;
+        padding: 0.2rem;
+
+        background: ${props=>props.theme["yellow-dark"]};
+        border-radius: 50%;
+
+        font-family: 'Roboto';
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 700;
+    }
+    }
 `
 
 export const Location = styled.div`
@@ -47,14 +66,39 @@ export const Location = styled.div`
 `
 
 export const Cart = styled.div`
+button{
 width: 2.3rem;
 height: 2.3rem;
 display: flex;
-padding: 0.5rem;
+padding: 0.3rem;
 justify-content: center;
 align-items: center;
-
+border: none;
+position: relative;
 border-radius: 0.375rem;
+cursor: pointer;
 
 background-color:${props=>props.theme["yellow-light"]};
+
+span{
+    display: flex;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    top: -0.5rem;
+    right:-0.5rem;
+    
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    color: ${props=>props.theme.white};
+
+}
+
+}
+
+
 `

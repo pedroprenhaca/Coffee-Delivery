@@ -1,4 +1,4 @@
-import { Coffee, Package, ShoppingCart, Timer } from "@phosphor-icons/react";
+import { Coffee,Package, ShoppingCart, Timer } from "@phosphor-icons/react";
 import EmbalagemTermica from '../../assets/Embalagem termica home.svg'
 import { HomeContainer,
         HeaderContainer,
@@ -14,8 +14,12 @@ import { HomeContainer,
         CoffeesContainer
 } from "./styles";
 import { Coffes } from "../../Components/Coffees";
+import { useContext } from "react";
+import { CoffeesContext } from "../../contexts/CoffeesContext";
 
 export function Home(){
+    const coffees = useContext(CoffeesContext)
+
     return(
         <HomeContainer>
             <HeaderContainer>
@@ -54,7 +58,12 @@ export function Home(){
                 <h2>Nossos cafés</h2>
 
                 <CoffeesContainer>
-                    <Coffes/>
+                {coffees.map((coffee)=>{
+                    return(
+                        <Coffes key={coffee.id} coffee={coffee}/>
+                    )
+                })}
+                    
                 </CoffeesContainer>
             </MainContainer>
         </HomeContainer>
